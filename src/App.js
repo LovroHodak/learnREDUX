@@ -3,6 +3,7 @@ import {useSelector, useDispatch} from 'react-redux'
 import {increment} from './actions/index'
 import {decrement} from './actions/index'
 import {signin} from './actions/index'
+import UUseEffectHook from './UUseEffectHook';
 
 function App() {
   const counter = useSelector(state => state.counter)
@@ -18,6 +19,8 @@ function App() {
 
       {isLogged ? <h3>Now I am signed in!</h3> : ''}
       <button onClick={() => dispatch(signin())} >Sign in</button>
+
+      <UUseEffectHook />
     </div>
   );
 }
